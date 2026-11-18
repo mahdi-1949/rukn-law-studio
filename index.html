@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
-  <script src="app.js?v=2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script src="app.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
@@ -26,7 +26,38 @@
         <span class="menu-glyph" aria-hidden="true"><i></i><i></i></span>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="ناوبری اصلی">
-        <a href="#services">حوزه‌های حقوقی</a>
+        <div class="nav-dropdown">
+          <button class="mega-trigger" type="button" aria-expanded="false" aria-controls="service-mega-menu">
+            <span>حوزه‌های حقوقی</span><span class="mega-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="mega-menu" id="service-mega-menu" hidden>
+            <div class="mega-menu-intro">
+              <p class="mega-eyebrow"><span class="eyebrow-line"></span> حوزه‌های حقوقی</p>
+              <h2>موضوعتان را از<br><em>یک نقطه شروع کنید.</em></h2>
+              <p>هر پرونده جزئیات خودش را دارد. حوزه‌ی نزدیک به موضوعتان را انتخاب کنید تا در گفت‌وگوی اولیه، قدم مناسب را پیدا کنیم.</p>
+              <a class="mega-contact-link" href="#contact">گفت‌وگو درباره موضوع شما <span aria-hidden="true">↙</span></a>
+              <span class="mega-index" aria-hidden="true">RUKN / 01—04</span>
+            </div>
+            <div class="mega-service-grid">
+              <a class="mega-service" href="#service-area-contracts">
+                <span class="mega-number">۰۱</span><span class="mega-service-copy"><strong>قرارداد و تعهدات</strong><small>تنظیم، بازبینی و اختلاف</small></span><span class="mega-arrow" aria-hidden="true">↖</span>
+              </a>
+              <a class="mega-service" href="#service-area-property">
+                <span class="mega-number">۰۲</span><span class="mega-service-copy"><strong>املاک و مالکیت</strong><small>معامله، اجاره و اسناد</small></span><span class="mega-arrow" aria-hidden="true">↖</span>
+              </a>
+              <a class="mega-service" href="#service-area-business">
+                <span class="mega-number">۰۳</span><span class="mega-service-copy"><strong>کسب‌وکار و شرکت‌ها</strong><small>همکاری و روابط تجاری</small></span><span class="mega-arrow" aria-hidden="true">↖</span>
+              </a>
+              <a class="mega-service" href="#service-area-family">
+                <span class="mega-number">۰۴</span><span class="mega-service-copy"><strong>مسائل خانواده</strong><small>با توجه به حریم خصوصی</small></span><span class="mega-arrow" aria-hidden="true">↖</span>
+              </a>
+            </div>
+            <div class="mega-menu-footer">
+              <p><strong>هنوز مطمئن نیستید از کجا شروع کنید؟</strong><span>موضوع را کوتاه مطرح کنید؛ ادامه مسیر در جلسه مشخص می‌شود.</span></p>
+              <a href="#process">آشنایی با روند همراهی <span aria-hidden="true">←</span></a>
+            </div>
+          </div>
+        </div>
         <a href="#approach">شیوه همراهی</a>
         <a href="#questions">پرسش‌های رایج</a>
         <a class="nav-contact" href="#contact">درخواست مشاوره</a>
@@ -88,7 +119,7 @@
           <p class="section-lead">برای شروع، موضوع را از جایی که بیشترین ابهام را دارد باز می‌کنیم. حوزه‌های زیر نمونه‌اند و دامنه خدمات دفتر در گفت‌وگوی اولیه مشخص می‌شود.</p>
         </div>
         <div class="service-list">
-          <article class="service-row">
+          <article class="service-row" id="service-area-contracts">
             <button class="service-trigger" type="button" aria-expanded="false" aria-controls="service-contracts">
               <span class="service-name">قراردادها و تعهدات</span>
               <span class="service-kicker">تنظیم، بازبینی و اختلاف</span>
@@ -99,7 +130,7 @@
               <a href="#contact">درباره این موضوع گفت‌وگو کنیم</a>
             </div>
           </article>
-          <article class="service-row">
+          <article class="service-row" id="service-area-property">
             <button class="service-trigger" type="button" aria-expanded="false" aria-controls="service-property">
               <span class="service-name">املاک و مالکیت</span>
               <span class="service-kicker">معامله، اجاره و اختلاف</span>
@@ -110,7 +141,7 @@
               <a href="#contact">درباره این موضوع گفت‌وگو کنیم</a>
             </div>
           </article>
-          <article class="service-row">
+          <article class="service-row" id="service-area-business">
             <button class="service-trigger" type="button" aria-expanded="false" aria-controls="service-business">
               <span class="service-name">کسب‌وکار و شرکت‌ها</span>
               <span class="service-kicker">همکاری، سهام و قرارداد</span>
@@ -121,7 +152,7 @@
               <a href="#contact">درباره این موضوع گفت‌وگو کنیم</a>
             </div>
           </article>
-          <article class="service-row">
+          <article class="service-row" id="service-area-family">
             <button class="service-trigger" type="button" aria-expanded="false" aria-controls="service-family">
               <span class="service-name">مسائل خانواده</span>
               <span class="service-kicker">حقوق و توافق‌های خانوادگی</span>
@@ -278,6 +309,10 @@
       <div class="footer-bottom section-wrap">
         <span>© رُکن · دفتر حقوقی</span>
         <a href="#top">بازگشت به بالا</a>
+      </div>
+      <div class="footer-signature" aria-label="امضای طراح سایت">
+        <span>طراحی شده با عشق</span><span>توسط:</span>
+        <a href="https://mahditavakoli.ir/">مهدی توکلی</a>
       </div>
     </footer>
     <a class="mobile-contact-cta" href="#contact">درخواست مشاوره</a>
