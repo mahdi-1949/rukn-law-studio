@@ -90,7 +90,7 @@ form?.addEventListener("submit", (event) => {
   const mailSubject = encodeURIComponent("درخواست مشاوره حقوقی از وب‌سایت رُکن");
   const mailBody = encodeURIComponent(`نام: ${name}\nشماره تماس: ${phone}\nموضوع کلی: ${subject}\n\nلطفاً زمان و شیوه گفت‌وگو را هماهنگ کنید.`);
   feedback.textContent = "پیش‌نویس ایمیل آماده می‌شود؛ ارسال نهایی با شماست.";
-  window.location.href = `mailto:${encodeURIComponent(email)}?subject=${mailSubject}&body=${mailBody}`;
+  window.location.href = `mailto:${email}?subject=${mailSubject}&body=${mailBody}`;
 });
 
 const profile = officeConfig.attorneyProfile || {};
