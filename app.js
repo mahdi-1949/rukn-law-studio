@@ -31,3 +31,12 @@ form?.addEventListener("submit", (event) => {
   feedback.textContent = "این نسخه نمایشی است؛ درخواست شما ارسال نشد.";
 });
 
+const mobileContactCta = document.querySelector(".mobile-contact-cta");
+const contactSection = document.querySelector("#contact");
+if (mobileContactCta && contactSection && "IntersectionObserver" in window) {
+  const contactObserver = new IntersectionObserver(([entry]) => {
+    mobileContactCta.classList.toggle("is-hidden", entry.isIntersecting);
+  }, { threshold: 0.12 });
+  contactObserver.observe(contactSection);
+}
+
